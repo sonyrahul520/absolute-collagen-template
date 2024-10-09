@@ -1,0 +1,84 @@
+{{'footer.css' | asset_url | stylesheet_tag}}
+{% schema %}
+    {
+      
+    "name": "Subscription reasons",
+        "tag": "section",
+        "class": "section",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "section_title",
+          "label": "Section title",
+          "default": "Why Subscribe?"
+        },
+        {
+          "type": "text",
+          "id": "box_1_content",
+          "label": "Box 1 Content",
+          "default": "{{ shop.metafields.custom.why_subscribe_reason1 }}"
+        },
+        {
+          "type": "text",
+          "id": "box_2_content",
+          "label": "Box 2 Content",
+          "default": "{{ shop.metafields.custom.why_subscribe_reason2 }}"
+        },
+        {
+          "type": "text",
+          "id": "box_3_content",
+          "label": "Box 3 Content",
+          "default": "{{ shop.metafields.custom.why_subscribe_reason3 }}"
+        }
+      ],
+      "presets": [ ]
+     
+    }
+    {% endschema %}
+    {% comment %} Schema {% endcomment %}
+
+    <section>
+    <div class="section-container">
+        <div class="section-title title-typography">
+            {{ section.settings.section_title}}
+        </div>
+        <div class="container">         
+            <fieldset class="box">
+              <legend class="number" id="box-1">1</legend>
+                <div class="text"> {{ settings.box_1_content }}</div>
+            </fieldset>
+
+            <fieldset class="box">
+                <legend class="number" id="box-2">2</legend>
+                  <div class="text"> {{ settings.box_2_content }}</div>
+              </fieldset>
+
+              <fieldset class="box">
+                <legend class="number" id="box-3">3</legend>
+                  <div class="text word-wrap"> {{ settings.box_3_content }}</div>
+              </fieldset>
+          </div>
+
+        <div class="button-holder button-margin">
+            <div onclick="openFeaturedProduct()" class="button-subscribe button-typography button-color scroll-down">Subscribe</div>
+        </div>
+    </div> 
+    <div class="footer-container">
+
+    </div>
+ 
+</section>
+
+<script>
+
+  function openFeaturedProduct(){
+    document.getElementById('shopify-section--template--23514582122831__featured-product').style.display= "block";
+    var element = document.querySelector("#shopify-section--template--23514582122831__featured-product");
+    element.scrollIntoView();
+  }
+
+</script>
+
+    
+
+    

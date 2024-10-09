@@ -1,0 +1,23 @@
+{{'sections.css' | asset_url | stylesheet_tag}}
+<section>
+    <div class="section-container background-color-yellow">
+        <div class="section-title title-typography">
+            {{ section.settings.section_title}}
+        </div>
+        <div class="section-contain-box-wrapper">
+
+        
+            {% for block in section.blocks %}
+                <div class="content-box word-wrap">
+                        <div class="section-content-title">
+                            {{block.settings.title1}}
+                        </div> 
+                        <div class="section-content-desc">
+                           {{block.settings.description1}}
+                        </div>
+                </div>
+            {% endfor %}
+
+          </div>
+    </div>    
+</section>

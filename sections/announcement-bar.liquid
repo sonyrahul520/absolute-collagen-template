@@ -1,0 +1,37 @@
+{{ 'application.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings['show-announcement']  %} 
+    <section>
+        <div class="announcement-bar" >
+            <div aria-label="Announcement bar">
+                UK's #1 collagen brand
+            </div>
+        </div>
+        </section>
+ {% endif %}
+<style>
+    .announcement-bar{
+        background-image: linear-gradient(50deg, #6c3921 13%, #be6439 28%, #a95e3c 45%, #f2996f 59%, #98502f 74%, #6c3921 90%);
+        color: white;
+       height: 25px;
+       padding-bottom: 5px;
+       text-align: center;
+    }
+</style>
+
+{%schema%}
+    {
+        "name" :"Announcement Bar",
+        "tag":"section",
+        "class": "section",
+        "settings":[
+            {
+                "type" : "checkbox",
+                "id": "show-announcement",
+                "label": "Show Announcement",
+                "default": true
+            }
+        ],
+        "presets":[]
+    }
+    {% endschema %}

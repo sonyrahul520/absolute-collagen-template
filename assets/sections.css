@@ -1,0 +1,72 @@
+
+.section-container{
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+    color: black;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.background-color-yellow{
+    background-color: rgb(253, 251, 216);
+}
+
+.section-title{
+    padding-top: 30px;   
+}
+
+.secondary-title-typography{
+    font-size: 30px;  
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+}
+
+.section-contain-box-wrapper{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ 
+
+.content-box{
+    padding-top: 50px;
+    width: 200px;
+}
+.section-content-title{
+    font-weight: 400;
+    font-size: 26px; 
+    padding-bottom: 30px;
+}
+
+.transform-upper{
+    text-transform: uppercase;
+}
+
+.featured-product-details{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 40px;
+}
+
+.product-details{
+    width: 400px;
+}
+
+/* Responsive design */ 
+@media (max-width: 535px) {
+    .section-contain-box-wrapper{
+        padding-top: 5px;
+        display: flex;
+        flex-direction: column;    
+    }  
+    .section-container{
+        width: 100%;
+        height: auto;
+    } 
+}
+

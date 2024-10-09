@@ -1,0 +1,100 @@
+
+{{'featured-product.css' |  asset_url |  stylesheet_tag}}
+{% assign product = all_products['marine-liquid-collagen-drink-for-women-14x10ml-sachets'] %}
+
+<section id="shopify-section--template--23514582122831__featured-product">
+  <main class="container">
+ 
+  <!-- Left Column / Headphones Image -->
+  <div class="left-column">
+    <img  width="800px" height="800px" src="{{'abc.webp'| asset_url}}" loading="lazy" alt="featured product image">
+  </div>
+  <!-- Right Column -->
+  <div class="right-column">
+    <!-- Product title -->
+    <div class="product-description title-typography">
+      {{product.title}}   
+    </div>
+ 
+    <!-- Product Configuration -->
+    <div class="product-configuration">    
+      <div class="product-color">
+      <div class="color-choose">
+
+      {% for variant in product.variants %}
+        
+        <div class="price-options" id="option-{{ forloop.index }}" onclick="change('{{variant.price |  money_with_currency}}', '{{variant.inventory_quantity}}','{{forloop.index}}', '{{forloop.length}}')">
+          <div class="radio-class">
+            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+            <label for="red"><span></span></label>
+          </div>
+          <div class="first-subscription">
+           <span class="transform-upper">{{variant.title}}</span> 
+            <span class="product-metafields-data">
+              {{ variant.metafields.custom.number_of_sachets.value | json}} Sachets 
+              {%if variant.metafields.custom.frequency.value > 0%}
+                every {{variant.metafields.custom.frequency.value | json}} 
+              weeks {%endif%}
+            </span>
+          </div>
+          <div class="first-subscription-price">
+           <span class="text-bold"> {{variant.metafields.custom.price_per_day.value |  money_with_currency }}</span> 
+          </div>
+        </div>
+           
+
+        {% endfor %}
+
+        <div class="product-price">
+          <a href="#" class="cart-btn button-color">Add to cart<span id="price-added"></span></a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    </div>
+    <div class="hide-display"> 
+      <div class="show-quanity-unavailable">
+        Unfortunately, the selected product type is unavailable.
+      </div>
+    </div>
+  
+
+  </div>
+</main>
+</section>
+
+
+
+<script>
+    // const element = "shopify-section--template--23514582122831__featured-product";
+    
+function change(variant_price, variant_quantity, loop_index, loop_length) {
+    document.getElementById(`option-${loop_index}`).style.backgroundColor='rgb(253, 251, 216)';
+    for(let i=1; i <= loop_length;i++){
+      if(i != loop_index){
+        document.getElementById(`option-${i}`).style.backgroundColor='#fff';
+      }
+    }
+    document.getElementById("price-added").innerText = variant_price;
+    if(variant_quantity == 0){
+      document.getElementsByClassName("hide-display")[0].style.opacity= 1;
+    }
+   else{
+      document.getElementsByClassName("hide-display")[0].style.opacity = 0;
+   }
+}
+</script>
+
+
+{% schema %}
+{
+  "name": "page title-description",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": []
+}
+    {% endschema %}

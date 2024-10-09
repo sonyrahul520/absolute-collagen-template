@@ -1,0 +1,60 @@
+<section>
+        {% if section.settings.image != blank %}
+
+                <div class="logo-img">
+                <a href="/" alt="Loads the homepage">
+                <img 
+                width="150"
+                height="80"
+                loading="lazy"
+                class="logo-center"
+                alt="Company logo image"
+                src="{{section.settings.image| image_url}}"
+                />
+                 </a>
+                </div>
+
+
+             {%- else -%}
+                
+            <div class="logo-img">
+            <a href="/" alt="Loads the homepage">
+            <img 
+            width="150"
+            height="80"
+            loading="lazy"
+            alt="Company logo image"
+            class="logo-center"
+            src="{{'ac-logo.svg'| asset_url}}"
+            />
+        </a>   
+    </div>
+
+{%endif%}
+</section>
+
+<style>
+.logo-center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+</style>
+
+
+{%schema%}
+    {
+        "name" :"Logo Image",
+        "settings":[
+            {
+                "type" : "image_picker",
+                "id": "image",
+                "label": "Logo"
+            }
+        ],
+        "presets":[]
+    }
+    {% endschema %}

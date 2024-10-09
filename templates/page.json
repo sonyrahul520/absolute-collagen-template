@@ -1,0 +1,32 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "three-sections": {
+        "type": "three-sections",
+        "settings": {
+          "padding_bottom": 28
+        }
+      },
+      "why-subscribe": {
+        "type": "subscription-reason",
+        "settings": {
+          "padding_bottom": 28
+        }
+      },
+      "featured-product":{
+        "type": "featured-product",
+        "settings": {
+          "padding_bottom": 28
+        }
+      }
+    },
+    "order": [
+      "main","three-sections","why-subscribe","featured-product"
+    ]
+  }

@@ -1,0 +1,4 @@
+@font-face {
+    font-family: "ivy-mode";
+    src: url("{{ 'ivy-mode-regular.eot' | asset_url }}") format("[font-format]");
+  }

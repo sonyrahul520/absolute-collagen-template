@@ -1,0 +1,13 @@
+{{'stylesheet-page.css' | asset_url | stylesheet_tag}}
+<section class="menu-container">
+    <div class="menu-options">
+        {% for link in linklists.main-menu.links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+    </div>
+    <div class="account-options">
+                <div class="cart-option">Cart</div>
+                <div class="account-option">Account</div>
+    </div>
+</section>
+

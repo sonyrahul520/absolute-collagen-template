@@ -5,12 +5,12 @@ Install the project:
 1. Pull the github repoitory of absolute collagen template page
 2. Upload the folder as a zip onto the shopify theme uploader in your store.
 3. Open the customise theme option, [Currently the template page is not developed for homepage but for a custom page, so the home page will thorw 404 error. Dont Panic!!!]
-4. Instead the drop down for pages and open 'Default page' or 'Custom page' option from the drop down as shown
+4. Instead open the drop down for pages and open 'Default page' or 'Custom page' option from the drop down as shown
    ![Screenshot 2024-10-09 150945](https://github.com/user-attachments/assets/58c93256-919c-4725-aa9c-0683bf61f1ec)
 ![image](https://github.com/user-attachments/assets/6cb292e7-5ce8-4456-8b99-accb7f228bca)
 
-5. Customise the content of page title, page description, completing the section contents.
-6. For the why subscribe section, I have pulled the page metafields as content.
+5. Customise the content of page title, page description, and complete the section contents.
+6. For the 'why subscribe?' section, the contents are populated from metafields. Please create three metafields for this page with name 'why subscribe reason1', 'why subscribe reason2', 'why subscribe reason3' and custom namespace why_subscribe_reason1, why_subscribe_reason2, why_subscribe_reason3.
 7. Add the Product with title 'Marine Liquid Collagen Drink For Women, 14x10ml Sachets' to make it visible as featured product at the end and price.
 8. The product page is populated with three product variants and each also uses metafield data to populate the number of sachets, frequency of delivery and per day fees.
 

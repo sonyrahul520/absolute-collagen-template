@@ -2,7 +2,7 @@
 
 Install the project:
 
-1. Pull the github repoitory of absolute collagen template page
+1. Pull the github repository of absolute collagen template page
 2. Upload the folder as a zip onto the shopify theme uploader in your store.
 3. Open the customise theme option, [Currently the template page is not developed for homepage but for a custom page, so the home page will thorw 404 error. Dont Panic!!!]
 4. Instead open the drop down for pages and open 'Default page' or 'Custom page' option from the drop down as shown

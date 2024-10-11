@@ -38,7 +38,7 @@ Install the project:
 3. The liquid code implements lazy loading of images, reducing JS dependence as much as possible, preloadng with tags such as stylesheet_tag, asset_url, image_tage, using responsive images.
 4. The sections, features, functions, are tested for performance and accessibility (accessibility guidelines are used and tested with chrome extensions).
 5. Even though tailwind is installed, custom css is mostly used
-6. Error handling conditions are cjecked during coding and for user experience.
+6. Error handling conditions are checked during coding and for user experience.
 
    Please get back to me for any further details.
    
